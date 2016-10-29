@@ -1,0 +1,48 @@
+body {
+	/*background-image: url("../images/bg.png");*/
+	background-repeat: repeat;
+	
+}
+
+p {
+	text-align: center;
+}
+
+h1{
+	text-align: center;
+}
+
+.wrapper {
+	background-color: white;
+	border: black solid 1px;	
+	margin: 5% 5% 5% 7%;
+	
+}
+
+.logo {
+	background-color: white;
+	margin: 5% 5% 5% 7%;
+}
+
+.timer {
+	background-color: white;
+	margin: 5% 5% 5% 7%;
+}
+
+.questions {
+	background-color: white;
+	margin: 5% 5% 5% 7%;
+}
+
+ul li {
+	text-decoration: none;
+	pointer-events:all;
+}
+
+li:hover { 
+    background-color: yellow;
+}
+
+.answer{
+	display: none;
+}
