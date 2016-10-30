@@ -1,0 +1,31 @@
+
+ ```</!DOCTYPE html>
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
+    <title></title>
+</head>
+<body>
+<div class="content col-md-10">
+    <p>Where does Harry live</p>
+        
+    <button class = "0 buttons">Number 5 Privet Drive</button>
+    <button class = "1 buttons">Number 3 Privet Drive</button>
+    <button class = "0 buttons">Number 4 Privet Drive</button>
+    <button class = "0 buttons">Number 6 Privet Drive</button>
+        
+</div>
+<script type="text/javascript">
+$(".buttons").on("click", function(){
+    if ($(this).hasClass("0")) {
+        console.log("false");
+    } else if ($(this).hasClass("1")) {
+        console.log("true")
+    };
+});
+
+
+    
+</script>
+</body>
+</html>
