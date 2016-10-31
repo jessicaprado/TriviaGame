@@ -7,17 +7,23 @@ var currentQuestion = 0;
 var correct = 0;
 var incorrect = 0; 
 var endOfQuiz = false;
-var selection
+var selection = [];
 
-var quizQuestions = [{
+var quizQuestion1 = {
 	question: "Where does Harry live?",
 	options: ["Number 5 Privet Drive", "Number 4 Privet Drive", "Number 7 Privet Drive", "Number 3 Privet Drive"],
-	answer: 1
-}, {
+	trueOrFalse: [false, true, false, false],
+	answer: "Number 4 Privet Drive"
+}; 
+
+var quizQuestion2 = {
 	question: "How many points is a Snitch worth?",
 	options: ["100", "450", "150", "300"],
-	answer: 2
-}]
+	trueOrFalse: [false, false, true, false],
+	answer: "150"
+}
+
+var quiz = [quizQuestion1, quizQuestion2];
 
 function reset () {
 	var currentQuestion = 0;
@@ -27,42 +33,66 @@ function reset () {
 }; //reset end
 
 function displayQuestion() {
-	var question = quizQuestions[currentQuestion].question;
-	var choices = quizQuestions[currentQuestion].options.length;
-	var questionPlacement = $(".quiz").find(".question");
-	var choicePlacement = $(".quiz").find(".options")
+	var question = quiz[currentQuestion].question;
+	var questionPlacement = $(".question").html(question);
+	
 	//puts questions into text.
 	$(questionPlacement).html(question);
 
 	//loop to display questions on HTML
-	for (i = 0; i < choices; i++) {
-	selection = quizQuestions[currentQuestion].options[i];
-	$("<p><button class='buttons' value='" + i + "'>" + selection + "</button>").appendTo(choicePlacement);	
-	}
-	console.log(i)
+
+	for (var i = 0; i < 4; i++) {
+
+	var guess = $("<button>");	
+	
+	guess.addClass("btn btn-primary selection");
+	guess.attr({
+		"data-options": quizQuestion1.trueOrFalse[i]	
+	});
+	guess.text(quiz[currentQuestion].options[i]);
+	$(".options").append(guess);	
+	};
 }; //displayQuestion end
 
+function clear() {
+	$(".question").empty();
+	$(".options").empty();
+	$(".question").empty();
 
+}
+
+function nextQuestion () {
+	currentQuestion++;
 	displayQuestion();
-	console.log(selection)
-
-
-$(".buttons").on("click", function(){
-	userGuess = $(this);
-	var checkGuess = userGuess.data("value")
-	console.log(checkGuess);
+}
+//Calling out displayQuestion function
+	displayQuestion();
 	
- 	//var userGuess = $(this.selection);	
-	//var checkGuess = userGuess.data("value");
-	//console.log(userGuess)
+// Start game
+$("button").on("click", function(){
+	var userGuess = $(this);
+	var checkGuess = userGuess.data("options");	
 
-	//if (checkGuess == true) {
-		//correct++;
-		//$(".content").html("<p>You are correct!</p>"); 
-   // } else if (checkGuess == false) {
-   // 	incorrect++
-  //      $(".content").html("<p>Sorry! The correct answer was " + answers.one + "!</p>"); 
-  //  };	
+	if (checkGuess === true) {
+		correct++
+	
+	$("<p>Correct!</p>").appendTo(".result");
+	$(".selection").hide();
+	setTimeout(function(){
+		nextQuestion();		
+		}  , 5000 );
+	} else {
+	incorrect++;
+	$(".question").hide();
+	$(".options").hide();
+	$("<p>Nope! The correct answer was " + rightAnswer + "</p>").appendTo(".result");
+	}
+	
+
+
+			
+	
+	
  });
 
 
