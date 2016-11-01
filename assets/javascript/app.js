@@ -4,7 +4,7 @@ var counter = setInterval(timer, 1000);
 //questions variables
 var correct = 0;
 var incorrect = 0; 
-unanswered = 0;
+var unanswered = 0;
 var endOfQuiz = false;
 var index = 0;
 
@@ -29,15 +29,44 @@ var quizQuestion3 = {
 	answer: "A tiara"
 	};
 
-var quiz = [quizQuestion1, quizQuestion2, quizQuestion3];
+var quizQuestion4 = {
+	question: "How many kids are in the Weasley family?",
+	options: ["7 kids", "8 kids", "6 kids", "5 kids"],
+	trueOrFalse: [true, false, false, false],
+	answer: "7 kids"
+	};
+
+var quizQuestion5 = {
+	question: "What did Dumbledore leave Ron in his will?",
+	options: ["A golden snitch", "The sword of Gryffindor", "A Deluminator", "The Tales of Beedle the Bard"],
+	trueOrFalse: [false, false, true, false],
+	answer: "A Deluminator"
+	};
+
+var quizQuestion6 = {
+	question: "What was James Potter's school nickname?",
+	options: ["Moony", "Wormtail", "Prongs", "Padfoot"],
+	trueOrFalse: [false, false, true, false],
+	answer: "Prongs"
+	};
+
+var quizQuestion7 = {
+	question: "When is Harry's Birthday?",
+	options: ["July 31st", "July 20th", "June 30th", "August 5th"],
+	trueOrFalse: [true, false, false, false],
+	answer: "July 31st"
+	};
+
+var quiz = [quizQuestion1, quizQuestion2, quizQuestion3, quizQuestion4, quizQuestion5, quizQuestion6, quizQuestion7];
 
 function reset () {
 	clear();
 	var index = 0;
 	var correct = 0;
 	var incorrect = 0; 
+	var unanswered = 0;
 	var endOfQuiz = false;
-	displayQuestion();
+	
 	}; //reset end
 
 function displayQuestion() {

@@ -39,7 +39,7 @@ h1{
 	text-align: center;
 	font-family: 'Berkshire Swash', cursive;
 	font-size: 24px;
-	margin: 2% 5% 5% 7%;
+	margin: 2% 5% 3% 7%;
 }
 
 .answer{
@@ -47,13 +47,13 @@ h1{
 }
 
 .options {
-	margin: 0 0 5% 7%;
+	margin: 0 0 2% 7%;
 	text-align: center;
 }
 
 .result {
 	text-align: center;
-	margin: 0% 5% 5% 7%;
+	margin: 0% 5% 2% 7%;
 	font-family: 'Berkshire Swash', cursive;
 	font-size: 24px;
 }
