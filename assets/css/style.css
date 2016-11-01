@@ -1,48 +1,76 @@
 body {
-	background-image: url("../images/bg.jpeg");*/
+	background-image: url("../images/bg.jpg");
+	background-size: cover;
 	background-repeat: repeat;
 	
 }
 
 p {
 	text-align: center;
+	font-family: 'Berkshire Swash', cursive;
 }
 
 h1{
 	text-align: center;
+	font-size: 60px;
+	font-family: 'Berkshire Swash', cursive;
 }
 
 .wrapper {
-	background-color: white;
+	background-color: burlywood;
+	opacity: .75;
 	border: black solid 1px;	
 	margin: 5% 5% 5% 7%;
 	
 }
 
 .logo {
-	background-color: white;
-	margin: 5% 5% 5% 7%;
+	background-color: burlywood;
+	margin: 5% 5% 0% 7%;
 }
 
 .timer {
-	background-color: white;
-	margin: 5% 5% 5% 7%;
+	background-color: burlywood;
+	margin: 5% 5% 2% 7%;
 }
 
-.quiz {
-	background-color: white;
-	margin: 5% 5% 5% 7%;
-}
 
-ul li {
-	text-decoration: none;
-	pointer-events:all;
-}
-
-li:hover { 
-    background-color: yellow;
+.question {
+	text-align: center;
+	font-family: 'Berkshire Swash', cursive;
+	font-size: 24px;
+	margin: 2% 5% 5% 7%;
 }
 
 .answer{
 	display: none;
+}
+
+.options {
+	margin: 0 0 5% 7%;
+	text-align: center;
+}
+
+.result {
+	text-align: center;
+	margin: 0% 5% 5% 7%;
+	font-family: 'Berkshire Swash', cursive;
+	font-size: 24px;
+}
+
+button {
+	background-color: brown;
+	position: relative;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    font-size: 16px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    cursor: pointer;
+
 }

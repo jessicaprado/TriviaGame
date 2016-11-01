@@ -52,7 +52,7 @@ function displayQuestion() {
 	//loop to display questions on HTML
 	for (var i = 0; i < 4; i++) {
 		var guess = $("<button>");	
-		guess.addClass("btn btn-primary selection");
+		guess.addClass("selection");
 		guess.attr({
 			"data-options": quiz[index].trueOrFalse[i]	
 			});
