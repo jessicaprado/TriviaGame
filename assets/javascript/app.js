@@ -61,12 +61,14 @@ var quiz = [quizQuestion1, quizQuestion2, quizQuestion3, quizQuestion4, quizQues
 
 function reset () {
 	clear();
-	var index = 0;
-	var correct = 0;
-	var incorrect = 0; 
-	var unanswered = 0;
-	var endOfQuiz = false;
-	
+	index = 0;
+	correct = 0;
+	incorrect = 0; 
+	unanswered = 0;
+	endOfQuiz = false;
+	second = 20;
+	counter = setInterval(timer, 1000);	
+	displayQuestion();
 	}; //reset end
 
 function displayQuestion() {
@@ -113,7 +115,7 @@ function right() {
 	$(".selection").hide();
 	$(".question").hide();
 	index++;
-	setTimeout(nextQuestion, 5000);		
+	setTimeout(nextQuestion, 3000);		
 	}
 
 function wrong() {
@@ -158,7 +160,8 @@ function displayScore() {
 	$(".reset").on("click", function() {
 		reset();
 	});
-	}	
+	}
+
 // Start game
 displayQuestion();
 
@@ -181,7 +184,7 @@ function resetTimer() {
 	counter = setInterval(timer, 1000);
 	//display timer on HTML
 	$("#timer").html("Time Left: " + second + " seconds");
-}
+	}
 
 function stopTimer() {
 	clearInterval(counter);
