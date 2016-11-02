@@ -162,10 +162,6 @@ function displayScore() {
 	});
 	}
 
-// Start game
-displayQuestion();
-
-
 function timer () {
 	second -=1
 	if (second == 0){
@@ -174,10 +170,9 @@ function timer () {
 		wrong();
 
 	}
-//display timer on HTML
-$("#timer").html("Time Left: " + second + " seconds");
-};//timer function
-
+	//display timer on HTML
+	$("#timer").html("Time Left: " + second + " seconds");
+	};//timer function
 
 function resetTimer() {
 	second = 20;	
@@ -190,9 +185,7 @@ function stopTimer() {
 	clearInterval(counter);
 	}
 
-
-
-
-
+// START GAME
+displayQuestion();
 
 }); //END OF SCRIPT. DO NOT TOUCH
