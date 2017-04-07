@@ -68,3 +68,10 @@ button {
     margin-bottom: 10px;
     cursor: pointer;
 }
+
+.intro {
+	background-color: rgba(222, 184, 135, 0.7);
+	border: black solid 1px;	
+	margin: 300px auto;
+	width: 50%;
+}
