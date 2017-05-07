@@ -1,77 +1,130 @@
 body {
-	background-image: url("../images/bg.jpg");
-	background-size: cover;
-	background-repeat: repeat;
+  font-family: arial;
+  background: #f8f9fb;
 }
 
-p {
-	text-align: center;
-	font-family: 'Berkshire Swash', cursive;
+html, body, ul, ol, li, form, fieldset, legend {
+  margin: 0;
+  padding: 0;
 }
 
-h1 {
-	text-align: center;
-	font-size: 60px;
-	font-family: 'Berkshire Swash', cursive;
+h1, h2, h3, h4, h5, h6, p {
+  margin-top: 0;
+}
+
+fieldset, img {
+  border: 0;
+}
+
+li {
+  list-style: none;
 }
 
 .wrapper {
-	background-color: rgba(222, 184, 135, 0.7);
-	border: black solid 1px;	
-	margin: 5% 5% 5% 7%;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
-.logo {
-	margin: 5% 5% 0% 7%;
+body {
+  background-image: url("../images/bg.jpg");
+  background-size: cover;
+  background-repeat: repeat;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
 }
 
-.timer {
-	margin: 5% 5% 2% 7%;
+#timer {
+  text-align: center;
+  font-family: "Berkshire Swash", cursive;
+  font-size: 20px;
 }
 
+h1 {
+  text-align: center;
+  font-family: "Berkshire Swash", cursive;
+  font-size: 60px;
+  margin-top: 20px;
+  margin-right: auto;
+}
+
+.wrapper {
+  background-color: rgba(222, 184, 135, 0.7);
+  border: black solid 1px;
+  height: 50%;
+  margin-top: 10%;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
 
 .question {
-	text-align: center;
-	font-family: 'Berkshire Swash', cursive;
-	font-size: 24px;
-	margin: 2% 5% 3% 7%;
-}
-
-.answer{
-	display: none;
-}
-
-.options {
-	margin: 0 0 2% 7%;
-	text-align: center;
+  text-align: center;
+  font-family: "Berkshire Swash", cursive;
+  font-size: 26px;
+  margin-bottom: 2%;
 }
 
 .result {
-	text-align: center;
-	margin: 0% 5% 2% 7%;
-	font-family: 'Berkshire Swash', cursive;
-	font-size: 24px;
+  text-align: center;
+  font-family: "Berkshire Swash", cursive;
+  font-size: 26px;
 }
 
-button {
-	background-color: brown;
-	position: relative;
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: block;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-    font-size: 16px;
-    margin: 0 auto;
-    margin-bottom: 10px;
-    cursor: pointer;
+.result button {
+  background-color: #660000;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  font-size: 16px;
+  cursor: pointer;
 }
 
-.intro {
-	background-color: rgba(222, 184, 135, 0.7);
-	border: black solid 1px;	
-	margin: 300px auto;
-	width: 50%;
+.result button:hover {
+  background: maroon;
+}
+
+.options {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.options button {
+  margin-bottom: 1%;
+  width: 25%;
+  background-color: #660000;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.options button:hover {
+  background: maroon;
 }

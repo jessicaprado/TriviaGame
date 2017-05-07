@@ -1,0 +1,64 @@
+@import "reset";
+@import "variables";
+@import "mixins";
+
+body {
+  background-image: url("../images/bg.jpg");
+  background-size: cover;
+  background-repeat: repeat;
+  display: flex;
+  align-items: baseline;
+}
+
+#timer {
+  @include textFormat;
+  font-size: 20px;
+}
+
+h1 {
+  @include textFormat;
+  font-size: $title;
+  margin-top: 20px;
+  margin-right: auto;
+}
+
+.wrapper {
+  background-color: $lightBrown;
+  border: $blackBorder;
+  height: 50%;
+  margin-top: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.question {
+  @include textFormat;
+  font-size: 26px;
+  margin-bottom: 2%;
+}
+
+.result {
+  @include textFormat;
+  font-size: 26px;
+  button {
+    @include buttons;
+    &:hover {
+      background: lighten($darkRed, 5);
+    }
+  }
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  button {
+    margin-bottom: 1%;
+    width: (100%/4);
+    @include buttons;
+    &:hover {
+      background: lighten($darkRed, 5);
+    }
+  }
+}
